@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Oq</title>
+</head>
+<body>
+    <header class="site-header"> 
+      <div class="container">
+        <p>Features</p>
+        <p>About</p>
+        <p>Contact us</p>
+      </div>
+    </header>
+    <section class="logo">
+      <img src="C:\Users\saler\Downloads\IMG_20231025_165640-removebg.png" width="1000" height="550">
+    </section>
+    <div class="login-container">
+      <form class="login-form" onsubmit="loginUser(event)">
+        <h2 class="login-title">Log In</h2>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="login-button">Login</button>
+        <a href="reg.html" class="register-link">Register</a>
+      </form>
+    </div>
+
+    <script>
+      function loginUser(event) {
+        event.preventDefault(); // Prevent the form from submitting (to handle it manually)
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        // For simplicity, you can add your logic for handling user login here
+        // For now, let's just display an alert
+        const username = getUsernameFromEmail(email);
+        alert(`Welcome, ${username}! You have successfully logged in.`);
+
+        // Store user information in local storage
+        const userData = { username, email, password };
+        localStorage.setItem('loggedInUser', JSON.stringify(userData));
+
+        // Redirect to the main page
+        redirectToMainPage();
+      }
+
+      function redirectToMainPage() {
+        // Assuming the main page is "main.html", change it to the actual file name
+        window.location.href = "main.html";
+      }
+
+      function getUsernameFromEmail(email) {
+        // Extract username from email (assuming email is in the form of "username@example.com")
+        const username = email.split('@')[0];
+        return username;
+      }
+      
+    </script>
+</body>
+</html>
