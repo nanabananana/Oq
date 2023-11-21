@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/static/css/grades.css" />
+    <script src="/static/js/script.js" defer></script>
+    <title>Grades Page</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="account-info">
+        <div class="account-photo">
+          <div
+            class="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600"
+          >
+            <svg
+              class="absolute w-12 h-12 text-gray-400 -left-1"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div class="account-details">
+          <p class="account-name" id="loggedInUser"></p>
+        </div>
+      </div>
+      <ul class="ul">
+        <li>
+          <a href="#">
+            <svg
+              width="20"
+              height="25"
+              viewBox="0 0 30 37"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M27 3.36364H25.5V0H22.5V3.36364H7.5V0H4.5V3.36364H3C1.35 3.36364 0 4.87727 0 6.72727V33.6364C0 35.4864 1.35 37 3 37H27C28.65 37 30 35.4864 30 33.6364V6.72727C30 4.87727 28.65 3.36364 27 3.36364ZM27 33.6364H3V11.7727H27V33.6364Z"
+                fill="white"
+              />
+            </svg>
+            <span class="ml-2">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{url_for('courses')}}" id="dashboardLink">
+            <svg
+              width="20"
+              height="25"
+              viewBox="0 0 30 34"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M30 10.2V30.6C30 32.47 28.3125 34 26.25 34H3.75C1.6875 34 0 32.47 0 30.6V10.2C0 7.038 2.4 4.403 5.625 3.638V0H11.25V3.4H18.75V0H24.375V3.638C27.6 4.403 30 7.038 30 10.2ZM3.75 17V20.4H22.5V23.8H26.25V17H3.75Z"
+                fill="#FFFBFB"
+              />
+            </svg>
+            <span class="ml-2">Courses</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg
+              width="20"
+              height="25"
+              viewBox="0 0 32 27"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M25.6 0H32V27H25.6V0ZM0 16.875H6.4V27H0V16.875ZM12.8 8.4375H19.2V27H12.8V8.4375Z"
+                fill="white"
+              />
+            </svg>
+            <span class="ml-2">Grades</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{url_for('oq')}}">
+            <svg
+              width="20"
+              height="25"
+              viewBox="0 0 36 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M31.7631 19.7625C31.8402 19.2 31.8788 18.6187 31.8788 18C31.8788 17.4 31.8402 16.8 31.7438 16.2375L35.6569 13.275C36.0039 13.0125 36.1002 12.5062 35.8882 12.1312L32.1872 5.90625C31.9559 5.49375 31.474 5.3625 31.0499 5.49375L26.4429 7.29375C25.4791 6.58125 24.4575 5.98125 23.3202 5.53125L22.6263 0.76875C22.5492 0.31875 22.1636 0 21.701 0H14.299C13.8364 0 13.4701 0.31875 13.393 0.76875L12.6991 5.53125C11.5618 5.98125 10.5209 6.6 9.57635 7.29375L4.96937 5.49375C4.5453 5.34375 4.0634 5.49375 3.83208 5.90625L0.150354 12.1312C-0.0809589 12.525 -0.00385476 13.0125 0.381667 13.275L4.29471 16.2375C4.19833 16.8 4.12123 17.4187 4.12123 18C4.12123 18.5812 4.15978 19.2 4.25616 19.7625L0.343115 22.725C-0.00385473 22.9875 -0.100235 23.4937 0.111802 23.8687L3.81281 30.0938C4.04412 30.5063 4.52602 30.6375 4.9501 30.5062L9.55708 28.7062C10.5209 29.4187 11.5425 30.0187 12.6798 30.4687L13.3737 35.2313C13.4701 35.6812 13.8364 36 14.299 36H21.701C22.1636 36 22.5492 35.6812 22.607 35.2313L23.3009 30.4687C24.4382 30.0187 25.4791 29.4187 26.4236 28.7062L31.0306 30.5062C31.4547 30.6562 31.9366 30.5063 32.1679 30.0938L35.8689 23.8687C36.1002 23.4562 36.0039 22.9875 35.6376 22.725L31.7631 19.7625ZM18 24.75C14.1833 24.75 11.0606 21.7125 11.0606 18C11.0606 14.2875 14.1833 11.25 18 11.25C21.8167 11.25 24.9394 14.2875 24.9394 18C24.9394 21.7125 21.8167 24.75 18 24.75Z"
+                fill="white"
+              />
+            </svg>
+            <span class="ml-2">Oq</span>
+          </a>
+        </li>
+      </ul>
+      <!-- Add other sidebar content as needed -->
+    </div>
+
+    <div class="content">
+      <form method="post" action="{{ url_for('add_grade') }}">
+        <div class="grades-container">
+          <h2>Grades</h2>
+          <button type="button" onclick="addRow()">Add Row</button>
+          <table class="grades-table">
+            <thead>
+              <tr>
+                <th>Course</th>
+                <th>Assignment</th>
+                <th>Description</th>
+                <th>Due Date</th>
+                <th>Grade</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for grade in grades %}
+              <tr>
+                <td>{{ grade.course }}</td>
+                <td>{{ grade.assignment }}</td>
+                <td>{{ grade.description }}</td>
+                <td>{{ grade.due_date }}</td>
+                <td>{{ grade.grade }}</td>
+                <td>
+                  <form
+                    action="{{ url_for('delete_grade', grade_id=grade.id) }}"
+                    method="post"
+                  >
+                    <input type="submit" class="delete-button" value="Delete" />
+                  </form>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <button type="submit" class="submit-button">Submit</button>
+        </div>
+      </form>
+      <!-- Add other content as needed -->
+    </div>
+
+    <script>
+      function addRow() {
+        var table = document.querySelector(".grades-table tbody");
+        var newRow = table.insertRow();
+
+        var cell1 = newRow.insertCell(0);
+        cell1.innerHTML = '<input type="text" name="course[]" />';
+
+        var cell2 = newRow.insertCell(1);
+        cell2.innerHTML = '<input type="text" name="assignment[]" />';
+
+        var cell3 = newRow.insertCell(2);
+        cell3.innerHTML = '<input type="text" name="description[]" />';
+
+        var cell4 = newRow.insertCell(3);
+        cell4.innerHTML = '<input type="date" name="due_date[]" />';
+
+        var cell5 = newRow.insertCell(4);
+        cell5.innerHTML = '<input type="text" name="grade[]" />';
+      }
+    </script>
+  </body>
+</html>

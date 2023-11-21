@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #444444;
+}
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  position: absolute;
+  left: 570px;
+  top: 150px;
+}
+
+.login-form {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input {
+  width: 89%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-button {
+  background-color: #255991;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+/* Existing styles for the login form */
+
+.register-link {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 13px;
+}
+
+.register-link:hover {
+  color: #000000;
+}
