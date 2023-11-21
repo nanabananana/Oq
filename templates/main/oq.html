@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" type="text/css" href="/static/css/oq.css" />
     <script src="/static/js/script.js" defer></script>
+    <title>Oq</title>
   </head>
   <body>
     <div class="sidebar">
@@ -31,7 +32,7 @@
       </div>
       <ul class="ul">
         <li>
-          <a href="{{url_for('index')}}">
+          <a href="{{url_for('dashboard')}}">
             <svg
               width="20"
               height="25"
@@ -48,7 +49,7 @@
           </a>
         </li>
         <li>
-          <a href="courses.html" id="dashboardLink">
+          <a href="{{url_for('courses')}}" id="dashboardLink">
             <svg
               width="20"
               height="25"

@@ -84,6 +84,10 @@ def courses():
 def oq():
     return render_template('main/oq.html')
 
+@app.route('/dashboard')
+def dashboard():
+    return render_template('main/dashboard.html')
+
 @app.route('/grades')
 def grades():
     grades_data = Grades.query.all()
